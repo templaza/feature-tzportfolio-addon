@@ -1,0 +1,76 @@
+.tzfont-container [class*="col-"] {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+[id*="tztabsaddonsplg_"] .control-label .spacer hr {
+  width: 100% !important;
+}
+[id*="tztabsaddonsplg_"] .field-spacer > .control-label {
+  width: 100% !important;
+}
+.tzportfolio-device-tab {
+  float: right;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.tzportfolio-device-tab .active {
+  color: royalblue;
+}
+.tzportfolio-device-tab li {
+  display: inline-block;
+}
+.tzportfolio-device-tab li + li {
+  margin-left: 3px;
+}
+.tzportfolio-tabcontent-container .tzportfolio-box-item {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.tzportfolio-box {
+  display: none;
+}
+.tzportfolio-box.active {
+  display: block;
+}
+.tzportfolio-lock span {
+  display: none;
+  margin-left: 5px;
+}
+.tzportfolio-lock .active {
+  display: inline;
+}
+.tzportfolio-box-item input {
+  width: 80px;
+}
+[data-base-name="tzportfolio_addon_features"] > div.tz-addon-accordion-container {
+  display: none;
+}
+[data-base-name="tzportfolio_addon_features"] > .btn-toolbar {
+  line-height: 0;
+}
+[data-base-name="tzportfolio_addon_features"].active > div.tz-addon-accordion-container {
+  display: block;
+}
+[data-base-name="tzportfolio_addon_features"].active > .tz-addon-accordion-title:after {
+  content: "\2212";
+}
+.tz-addon-accordion-title {
+  display: block;
+  padding: 15px 0 8px;
+}
+.tz-addon-accordion-title a {
+  color: inherit;
+  text-decoration: none;
+}
+.tz-addon-accordion-title a:hover,
+.tz-addon-accordion-title a:focus {
+  color: inherit;
+}
+.tz-addon-accordion-title:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  margin-left: 5px;
+}
+/*# sourceMappingURL=style.css.map */

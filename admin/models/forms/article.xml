@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <!-- Parameters for article's create or edit view -->
+    <fields name="attribs">
+        <!-- Start article options in category listings -->
+        <fieldset name="article_category_listing">
+            <field type="spacer" name="spacer_feature_article_category_listing_hr" hr="true"/>
+            <field type="spacer" name="spacer_feature_article_category_listing_name"
+                   class="alert alert-warning btn-block"
+                   label="PLG_CONTENT_FEATURE_OPTIONS_LABEL"/>
+            <field type="list" name="cat_feature_content_show"
+                   default=""
+                   label="PLG_CONTENT_FEATURE_CATEGORY_SHOW_LABEL"
+                   description="PLG_CONTENT_FEATURE_CATEGORY_SHOW_LABEL">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+        </fieldset>
+        <!-- End article options in category listings -->
+
+        <!-- Start article options -->
+        <fieldset name="article">
+            <field type="spacer" name="spacer_feature_article_hr" hr="true"/>
+            <field type="spacer" name="spacer_feature_article_name"
+                   class="alert alert-warning btn-block"
+                   label="PLG_CONTENT_FEATURE_OPTIONS_LABEL"/>
+            <field type="list" name="feature_content_show"
+                   default=""
+                   label="PLG_CONTENT_FEATURE_SHOW_LABEL"
+                   description="PLG_CONTENT_FEATURE_SHOW_LABEL">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+        </fieldset>
+        <!-- End article options -->
+    </fields>
+    <!-- End parameters for article's create or edit view -->
+</form>

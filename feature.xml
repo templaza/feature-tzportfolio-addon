@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="tz_portfolio_plus-plugin" group="content" method="upgrade">
+    <name>plg_content_feature</name>
+    <author>Sonny</author>
+    <creationDate>March 2023</creationDate>
+    <copyright>Copyright (C) 2011-2023 TemPlaza. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>support@templaza.com</authorEmail>
+    <authorUrl>www.tzportfolio.com</authorUrl>
+    <version>1.0.2</version>
+    <description>PLG_CONTENT_FEATURE_XML_DESCRIPTION</description>
+
+    <files>
+        <filename plugin="feature">feature.php</filename>
+        <filename>controller.php</filename>
+        <filename>index.html</filename>
+        <folder>admin</folder>
+        <folder>controllers</folder>
+        <folder>language</folder>
+        <folder>models</folder>
+        <folder>modules</folder>
+        <folder>tmpl</folder>
+        <folder>views</folder>
+    </files>
+
+    <config>
+        <fields name="params" addfieldpath="administrator/components/com_tz_portfolio_plus/models/fields">
+            <!-- Parameters for back-end -->
+            <fieldset name="basic">
+                <field type="radio" name="cat_feature_content_show"
+                       class="btn-group" default="0"
+                       label="PLG_CONTENT_FEATURE_CATEGORY_SHOW_LABEL">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field type="radio" name="feature_content_show"
+                       class="btn-group" default="1"
+                       label="PLG_CONTENT_FEATURE_SHOW_LABEL">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field type="radio" name="feature_content_uikit"
+                       default="0" class="switcher btn-group"
+                       label="PLG_CONTENT_FEATURE_UIKIT_LABEL"
+                       description="PLG_CONTENT_FEATURE_UIKIT_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+            </fieldset>
+            <!-- End parameters for front-end -->
+
+        </fields>
+    </config>
+</extension>

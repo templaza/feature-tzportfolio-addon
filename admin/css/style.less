@@ -1,0 +1,96 @@
+.tzfont-container {
+  [class*="col-"] {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+[id*="tztabsaddonsplg_"] {
+  .control-label {
+    .spacer {
+      hr {
+        width: 100% !important;
+      }
+    }
+  }
+  .field-spacer {
+    >.control-label {
+      width: 100% !important;
+    }
+  }
+}
+.tzportfolio-device-tab {
+  .active {
+    color: royalblue;
+  }
+  float: right;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  li {
+    display: inline-block;
+  }
+  li+li {
+    margin-left: 3px;
+  }
+}
+.tzportfolio-tabcontent-container {
+  .tzportfolio-box-item {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+.tzportfolio-box {
+  display: none;
+}
+.tzportfolio-box.active {
+  display: block;
+}
+.tzportfolio-lock {
+  span {
+    display: none;
+    margin-left: 5px;
+  }
+  .active {
+    display: inline;
+  }
+}
+.tzportfolio-box-item {
+  input {
+    width: 80px;
+  }
+}
+[data-base-name="tzportfolio_addon_features"] {
+  > div.tz-addon-accordion-container{
+    display: none;
+  }
+  > .btn-toolbar {
+    line-height: 0;
+  }
+  &.active {
+    > div.tz-addon-accordion-container{
+      display: block;
+    }
+    > .tz-addon-accordion-title {
+      &:after {
+        content: "\2212";
+      }
+    }
+  }
+}
+.tz-addon-accordion-title {
+  display: block;
+  padding: 15px 0 8px;
+  a {
+    color: inherit;
+    text-decoration: none;
+    &:hover, &:focus {
+      color: inherit;
+    }
+  }
+  &:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    margin-left: 5px;
+  }
+}

@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <!-- Form's field for article's create or edit view -->
+    <fieldset addfieldpath="/administrator/components/com_tz_portfolio_plus/models/fields" name="basic">
+        <!-- FIELDS FOR IMAGES -->
+
+        <field type="list" name="feature_type" default="image"
+               label="TZPORTFOLIO_ADDON_FEATURE_TYPE">
+            <option value="icon">TZPORTFOLIO_ADDON_ICON</option>
+            <option value="image">TZPORTFOLIO_ADDON_FEATURE_IMAGE</option>
+            <option value="heading">TZPORTFOLIO_ADDON_FEATURE_HEADING</option>
+            <option value="divider">TZPORTFOLIO_ADDON_FEATURE_DIVIDER</option>
+        </field>
+        <field type="color" name="divider_color" default="" format="rgba" showon="feature_type:divider"
+               label="TZPORTFOLIO_ADDON_DIVIDER_COLOR">
+        </field>
+        <field type="number" name="divider_width" default="1" min="1" max="100" showon="feature_type:divider"
+               label="TZPORTFOLIO_ADDON_DIVIDER_WIDTH">
+        </field>
+        <field type="spacer" name="spacer_addon_feature_article_hr" hr="true"  showon="feature_type!:divider"/>
+        <field name="feature_title_note" type="note" label="Title Options" showon="feature_type!:divider" />
+        <field type="textarea" name="title" showon="feature_type!:divider"
+               label="COM_TZ_PORTFOLIO_PLUS_LABEL_TITLE"/>
+        <field type="list" name="title_element" default="h3" showon="title!:"
+               label="TZPORTFOLIO_ADDON_HTML_ELEMENT">
+            <option value="h1">h1</option>
+            <option value="h2">h2</option>
+            <option value="h3">h3</option>
+            <option value="h4">h4</option>
+            <option value="h5">h5</option>
+            <option value="h6">h6</option>
+            <option value="div">div</option>
+            <option value="span">span</option>
+            <option value="p">p</option>
+        </field>
+        <field type="tzfont" name="title_font" default="" showon="title!:"
+               label="TZPORTFOLIO_ADDON_TITLE_FONT">
+        </field>
+        <field type="color" name="title_color" default="" format="rgba" showon="title!:"
+               label="TZPORTFOLIO_ADDON_TITLE_COLOR">
+        </field>
+        <field type="color" name="title_color_hover" default="" format="rgba" showon="title!:"
+               label="TZPORTFOLIO_ADDON_TITLE_COLOR_HOVER">
+        </field>
+        <field type="number" name="title_margin_top" showon="title!:"
+               label="TZPORTFOLIO_ADDON_TITLE_MARGIN_TOP"/>
+        <field type="number" name="title_margin_bottom" showon="title!:"
+               label="TZPORTFOLIO_ADDON_TITLE_MARGIN_BOTTOM"/>
+        <field type="url" name="title_image_icon_url" showon="title!:"
+               label="TZPORTFOLIO_ADDON_TITLE_IMAGE_ICON_URL"/>
+        <field type="list" name="target" default="_blank" showon="title!:"
+               label="TZPORTFOLIO_ADDON_TARGET">
+            <option value="_self">TZPORTFOLIO_ADDON_TARGET_SELF</option>
+            <option value="_blank">TZPORTFOLIO_ADDON_TARGET_BLANK</option>
+        </field>
+
+        <field type="spacer" name="spacer_addon_feature_icon_image_hr" hr="true" showon="feature_type:image[OR]feature_type:icon" />
+        <field name="feature_image_note" type="note" label="TZPORTFOLIO_ADDON_FEATURE_IMAGE_NOTE" showon="feature_type:image" />
+        <field name="feature_icon_note" type="note" label="TZPORTFOLIO_ADDON_FEATURE_ICON_NOTE" showon="feature_type:icon" />
+
+        <field type="list" name="feature_position" default="after" showon="feature_type:image[OR]feature_type:icon"
+               label="TZPORTFOLIO_ADDON_FEATURE_POSITION">
+            <option value="before">TZPORTFOLIO_ADDON_FEATURE_POSITION_BEFORE</option>
+            <option value="after">TZPORTFOLIO_ADDON_FEATURE_POSITION_AFTER</option>
+            <option value="left">TZPORTFOLIO_ADDON_FEATURE_POSITION_LEFT</option>
+            <option value="right">TZPORTFOLIO_ADDON_FEATURE_POSITION_RIGHT</option>
+        </field>
+
+        <field type="media" name="feature_image" default="" showon="feature_type:image"
+               label="TZPORTFOLIO_ADDON_FEATURE_IMAGE">
+        </field>
+        <field type="tzmargin" name="feature_image_margin" default="" showon="feature_type:image"
+               label="TZPORTFOLIO_ADDON_MARGIN">
+        </field>
+
+        <field type="tzicon" name="feature_icon" default="" showon="feature_type:icon"
+               label="TZPORTFOLIO_ADDON_ICON">
+        </field>
+        <field name="feature_icon_size" type="number" default="48" label="TZPORTFOLIO_ADDON_FEATURE_ICON_SIZE" description="" min="1" max="400" step="1" showon="feature_type:icon" />
+        <field type="color" name="feature_icon_color" default="" format="rgba" showon="feature_type:icon"
+               label="TZPORTFOLIO_ADDON_FEATURE_ICON_COLOR">
+        </field>
+        <field type="color" name="feature_icon_color_hover" default="" format="rgba" showon="feature_type:icon"
+               label="TZPORTFOLIO_ADDON_FEATURE_ICON_COLOR_HOVER">
+        </field>
+        <field type="color" name="feature_icon_background" default="" format="rgba" showon="feature_type:icon"
+               label="TZPORTFOLIO_ADDON_FEATURE_ICON_BACKGROUND">
+        </field>
+        <field type="color" name="feature_icon_background_hover" default="" format="rgba" showon="feature_type:icon"
+               label="TZPORTFOLIO_ADDON_BACKGROUND_HOVER">
+        </field>
+        <field type="color" name="feature_icon_border_color" default="" format="rgba" showon="feature_type:icon"
+               label="TZPORTFOLIO_ADDON_FEATURE_ICON_BORDER_COLOR">
+        </field>
+        <field type="color" name="feature_icon_border_color_hover" default="" format="rgba" showon="feature_type:icon"
+               label="TZPORTFOLIO_ADDON_FEATURE_ICON_BORDER_COLOR_HOVER">
+        </field>
+        <field name="feature_icon_border_width" type="number" default="" label="TZPORTFOLIO_ADDON_FEATURE_ICON_BORDER_WIDTH" description="" min="1" max="100" step="1" showon="feature_type:icon" />
+        <field name="feature_icon_border_radius" type="number" default="" label="TZPORTFOLIO_ADDON_FEATURE_ICON_BORDER_RADIUS" description="" min="1" max="400" step="1" showon="feature_type:icon" />
+        <field type="number" name="feature_icon_margin_top" showon="feature_type:icon"
+               label="TZPORTFOLIO_ADDON_MARGIN_TOP"/>
+        <field type="number" name="feature_icon_margin_bottom" showon="feature_type:icon"
+               label="TZPORTFOLIO_ADDON_MARGIN_BOTTOM"/>
+        <field type="tzpadding" name="feature_icon_padding" default="" showon="feature_type:icon"
+               label="TZPORTFOLIO_ADDON_PADDING">
+        </field>
+
+        <field type="spacer" name="spacer_addon_feature_meta_hr" hr="true" showon="feature_type:heading" />
+        <field name="feature_meta_option_note" type="note" label="Meta Options" showon="feature_type:heading" />
+        <field type="textarea" name="meta" showon="feature_type:heading"
+               label="Meta"/>
+        <field type="list" name="meta_element" default="p" showon="feature_type:heading[AND]meta!:"
+               label="TZPORTFOLIO_ADDON_HTML_ELEMENT">
+            <option value="h1">h1</option>
+            <option value="h2">h2</option>
+            <option value="h3">h3</option>
+            <option value="h4">h4</option>
+            <option value="h5">h5</option>
+            <option value="h6">h6</option>
+            <option value="div">div</option>
+            <option value="span">span</option>
+            <option value="p">p</option>
+        </field>
+        <field type="tzfont" name="meta_font" default="" showon="feature_type:heading[AND]meta!:"
+               label="TZPORTFOLIO_ADDON_TITLE_FONT">
+        </field>
+        <field type="color" name="meta_color" default="" format="rgba" showon="feature_type:heading[AND]meta!:"
+               label="TZPORTFOLIO_ADDON_TITLE_COLOR">
+        </field>
+        <field type="color" name="meta_color_hover" default="" format="rgba" showon="feature_type:heading[AND]meta!:"
+               label="TZPORTFOLIO_ADDON_TITLE_COLOR_HOVER">
+        </field>
+        <field type="number" name="meta_margin_top" showon="feature_type:heading[AND]meta!:"
+               label="TZPORTFOLIO_ADDON_TITLE_MARGIN_TOP"/>
+        <field type="number" name="meta_margin_bottom" showon="feature_type:heading[AND]meta!:"
+               label="TZPORTFOLIO_ADDON_TITLE_MARGIN_BOTTOM"/>
+
+        <field type="spacer" name="spacer_addon_feature_content_hr" hr="true" />
+        <field name="feature_content_option_note" type="note" label="TZPORTFOLIO_ADDON_CONTENT_NOTE" />
+        <field name="feature_content" type="editor" label="TZPORTFOLIO_ADDON_FEATURE_CONTENT" description="" filter="safehtml" showon="feature_type!:divider" />
+        <field type="tzfont" name="feature_content_font" default="" showon="feature_type!:divider"
+               label="TZPORTFOLIO_ADDON_CONTENT_FONT">
+        </field>
+        <field type="color" name="feature_content_color" default="" format="rgba" showon="feature_type!:divider"
+               label="TZPORTFOLIO_ADDON_TEXT_COLOR">
+        </field>
+        <field type="color" name="feature_content_color_hover" default="" format="rgba" showon="feature_type!:divider"
+               label="TZPORTFOLIO_ADDON_TEXT_COLOR_HOVER">
+        </field>
+        <field type="color" name="feature_content_background" default="" format="rgba" showon="feature_type!:divider"
+               label="TZPORTFOLIO_ADDON_BACKGROUND">
+        </field>
+        <field type="color" name="feature_content_background_hover" default="" format="rgba" showon="feature_type!:divider"
+               label="TZPORTFOLIO_ADDON_BACKGROUND_HOVER">
+        </field>
+        <field type="tzpadding" name="feature_content_padding" default=""
+               label="TZPORTFOLIO_ADDON_PADDING">
+        </field>
+        <field type="list" name="feature_alignment" default="" showon="feature_type!:divider"
+               label="TZPORTFOLIO_ADDON_ALIGNMENT">
+            <option value="">JGLOBAL_USE_GLOBAL</option>
+            <option value="left">TZPORTFOLIO_ADDON_ALIGNMENT_LEFT</option>
+            <option value="center">TZPORTFOLIO_ADDON_ALIGNMENT_CENTER</option>
+            <option value="right">TZPORTFOLIO_ADDON_ALIGNMENT_RIGHT</option>
+        </field>
+        <field type="list" name="desc_width_xl" default="col-xl-12" showon="feature_type:heading"
+               label="TZPORTFOLIO_ADDON_LARGE_DESKTOP_LAYOUT">
+            <option value="col-xl-1">col-xl-1</option>
+            <option value="col-xl-2">col-xl-2</option>
+            <option value="col-xl-3">col-xl-3</option>
+            <option value="col-xl-4">col-xl-4</option>
+            <option value="col-xl-5">col-xl-5</option>
+            <option value="col-xl-6">col-xl-6</option>
+            <option value="col-xl-7">col-xl-7</option>
+            <option value="col-xl-8">col-xl-8</option>
+            <option value="col-xl-9">col-xl-9</option>
+            <option value="col-xl-10">col-xl-10</option>
+            <option value="col-xl-11">col-xl-11</option>
+            <option value="col-xl-12">col-xl-12</option>
+        </field>
+        <field type="list" name="desc_width_lg" default="col-lg-12" showon="feature_type:heading"
+               label="TZPORTFOLIO_ADDON_DESKTOP_LAYOUT">
+            <option value="col-lg-1">col-lg-1</option>
+            <option value="col-lg-2">col-lg-2</option>
+            <option value="col-lg-3">col-lg-3</option>
+            <option value="col-lg-4">col-lg-4</option>
+            <option value="col-lg-5">col-lg-5</option>
+            <option value="col-lg-6">col-lg-6</option>
+            <option value="col-lg-7">col-lg-7</option>
+            <option value="col-lg-8">col-lg-8</option>
+            <option value="col-lg-9">col-lg-9</option>
+            <option value="col-lg-10">col-lg-10</option>
+            <option value="col-lg-11">col-lg-11</option>
+            <option value="col-lg-12">col-lg-12</option>
+        </field>
+        <field type="list" name="desc_width_md" default="col-md-12" showon="feature_type:heading"
+               label="TZPORTFOLIO_ADDON_TABLET_LAYOUT">
+            <option value="col-md-1">col-md-1</option>
+            <option value="col-md-2">col-md-2</option>
+            <option value="col-md-3">col-md-3</option>
+            <option value="col-md-4">col-md-4</option>
+            <option value="col-md-5">col-md-5</option>
+            <option value="col-md-6">col-md-6</option>
+            <option value="col-md-7">col-md-7</option>
+            <option value="col-md-8">col-md-8</option>
+            <option value="col-md-9">col-md-9</option>
+            <option value="col-md-10">col-md-10</option>
+            <option value="col-md-11">col-md-11</option>
+            <option value="col-md-12">col-md-12</option>
+        </field>
+        <field type="list" name="desc_width_sm" default="col-sm-12" showon="feature_type:heading"
+               label="TZPORTFOLIO_ADDON_LANDSCAPE_MOBILE_LAYOUT">
+            <option value="col-sm-1">col-sm-1</option>
+            <option value="col-sm-2">col-sm-2</option>
+            <option value="col-sm-3">col-sm-3</option>
+            <option value="col-sm-4">col-sm-4</option>
+            <option value="col-sm-5">col-sm-5</option>
+            <option value="col-sm-6">col-sm-6</option>
+            <option value="col-sm-7">col-sm-7</option>
+            <option value="col-sm-8">col-sm-8</option>
+            <option value="col-sm-9">col-sm-9</option>
+            <option value="col-sm-10">col-sm-10</option>
+            <option value="col-sm-11">col-sm-11</option>
+            <option value="col-sm-12">col-sm-12</option>
+        </field>
+        <field type="list" name="desc_width_xs" default="col-xs-12" showon="feature_type:heading"
+               label="TZPORTFOLIO_ADDON_MOBILE_LAYOUT">
+            <option value="col-xs-1">col-xs-1</option>
+            <option value="col-xs-2">col-xs-2</option>
+            <option value="col-xs-3">col-xs-3</option>
+            <option value="col-xs-4">col-xs-4</option>
+            <option value="col-xs-5">col-xs-5</option>
+            <option value="col-xs-6">col-xs-6</option>
+            <option value="col-xs-7">col-xs-7</option>
+            <option value="col-xs-8">col-xs-8</option>
+            <option value="col-xs-9">col-xs-9</option>
+            <option value="col-xs-10">col-xs-10</option>
+            <option value="col-xs-11">col-xs-11</option>
+            <option value="col-xs-12">col-xs-12</option>
+        </field>
+        <field type="text" name="feature_class"
+               label="TZPORTFOLIO_ADDON_CONTENT_CLASS"/>
+
+        <field type="spacer" name="spacer_addon_feature_content_button_hr" hr="true" showon="feature_type:image[OR]feature_type:icon" />
+        <field name="feature_content_button_options_note" type="note" label="TZPORTFOLIO_ADDON_BUTTON_NOTE" showon="feature_type:image[OR]feature_type:icon" />
+        <field type="text" name="feature_button_text" showon="feature_type:image[OR]feature_type:icon"
+               label="COM_TZ_PORTFOLIO_PLUS_LABEL_BUTTON_TEXT"/>
+        <field name="feature_content_button_options_note_description" type="note" description="TZPORTFOLIO_ADDON_BUTTON_NOTE_DESC" showon="feature_type:image[OR]feature_type:icon" />
+        <field name="feature_button_url" type="url" default="" label="COM_TZ_PORTFOLIO_PLUS_LABEL_BUTTON_URL" showon="feature_button_text!:" />
+        <field type="tzfont" name="feature_button_font" default="" showon="feature_button_text!:"
+               label="TZPORTFOLIO_ADDON_CONTENT_FONT">
+        </field>
+        <field type="color" name="feature_button_color" default="" format="rgba" showon="feature_button_text!:"
+               label="TZPORTFOLIO_ADDON_TEXT_COLOR">
+        </field>
+        <field type="color" name="feature_button_color_hover" default="" format="rgba" showon="feature_button_text!:"
+               label="TZPORTFOLIO_ADDON_TEXT_COLOR_HOVER">
+        </field>
+        <field type="color" name="feature_button_background" default="" format="rgba" showon="feature_button_text!:"
+               label="TZPORTFOLIO_ADDON_BACKGROUND">
+        </field>
+        <field type="color" name="feature_button_background_hover" default="" format="rgba" showon="feature_button_text!:"
+               label="TZPORTFOLIO_ADDON_BACKGROUND_HOVER">
+        </field>
+        <field type="text" name="feature_button_border_radius" showon="feature_button_text!:"
+               label="TZPORTFOLIO_ADDON_BORDER_RADIUS"/>
+        <field type="tzpadding" name="feature_button_padding" default="" showon="feature_button_text!:"
+               label="TZPORTFOLIO_ADDON_PADDING">
+        </field>
+        <field type="tzmargin" name="feature_button_margin" default="" showon="feature_button_text!:"
+               label="TZPORTFOLIO_ADDON_MARGIN">
+        </field>
+
+        <field type="spacer" name="spacer_addon_feature_content_responsive_hr" hr="true"/>
+        <field name="responsive_note" type="note" label="TZPORTFOLIO_ADDON_RESPONSIVE" />
+        <field type="list" name="feature_width_xl" default=""
+               label="TZPORTFOLIO_ADDON_LARGE_DESKTOP_LAYOUT">
+            <option value="">JGLOBAL_INHERIT</option>
+            <option value="col-xl-1">col-xl-1</option>
+            <option value="col-xl-2">col-xl-2</option>
+            <option value="col-xl-3">col-xl-3</option>
+            <option value="col-xl-4">col-xl-4</option>
+            <option value="col-xl-5">col-xl-5</option>
+            <option value="col-xl-6">col-xl-6</option>
+            <option value="col-xl-7">col-xl-7</option>
+            <option value="col-xl-8">col-xl-8</option>
+            <option value="col-xl-9">col-xl-9</option>
+            <option value="col-xl-10">col-xl-10</option>
+            <option value="col-xl-11">col-xl-11</option>
+            <option value="col-xl-12">col-xl-12</option>
+        </field>
+        <field type="list" name="feature_width_lg" default=""
+               label="TZPORTFOLIO_ADDON_DESKTOP_LAYOUT">
+            <option value="">JGLOBAL_INHERIT</option>
+            <option value="col-lg-1">col-lg-1</option>
+            <option value="col-lg-2">col-lg-2</option>
+            <option value="col-lg-3">col-lg-3</option>
+            <option value="col-lg-4">col-lg-4</option>
+            <option value="col-lg-5">col-lg-5</option>
+            <option value="col-lg-6">col-lg-6</option>
+            <option value="col-lg-7">col-lg-7</option>
+            <option value="col-lg-8">col-lg-8</option>
+            <option value="col-lg-9">col-lg-9</option>
+            <option value="col-lg-10">col-lg-10</option>
+            <option value="col-lg-11">col-lg-11</option>
+            <option value="col-lg-12">col-lg-12</option>
+        </field>
+        <field type="list" name="feature_width_md" default=""
+               label="TZPORTFOLIO_ADDON_TABLET_LAYOUT">
+            <option value="">JGLOBAL_INHERIT</option>
+            <option value="col-md-1">col-md-1</option>
+            <option value="col-md-2">col-md-2</option>
+            <option value="col-md-3">col-md-3</option>
+            <option value="col-md-4">col-md-4</option>
+            <option value="col-md-5">col-md-5</option>
+            <option value="col-md-6">col-md-6</option>
+            <option value="col-md-7">col-md-7</option>
+            <option value="col-md-8">col-md-8</option>
+            <option value="col-md-9">col-md-9</option>
+            <option value="col-md-10">col-md-10</option>
+            <option value="col-md-11">col-md-11</option>
+            <option value="col-md-12">col-md-12</option>
+        </field>
+        <field type="list" name="feature_width_sm" default=""
+               label="TZPORTFOLIO_ADDON_LANDSCAPE_MOBILE_LAYOUT">
+            <option value="">JGLOBAL_INHERIT</option>
+            <option value="col-sm-1">col-sm-1</option>
+            <option value="col-sm-2">col-sm-2</option>
+            <option value="col-sm-3">col-sm-3</option>
+            <option value="col-sm-4">col-sm-4</option>
+            <option value="col-sm-5">col-sm-5</option>
+            <option value="col-sm-6">col-sm-6</option>
+            <option value="col-sm-7">col-sm-7</option>
+            <option value="col-sm-8">col-sm-8</option>
+            <option value="col-sm-9">col-sm-9</option>
+            <option value="col-sm-10">col-sm-10</option>
+            <option value="col-sm-11">col-sm-11</option>
+            <option value="col-sm-12">col-sm-12</option>
+        </field>
+        <field type="list" name="feature_width_xs" default=""
+               label="TZPORTFOLIO_ADDON_MOBILE_LAYOUT">
+            <option value="">JGLOBAL_INHERIT</option>
+            <option value="col-xs-1">col-xs-1</option>
+            <option value="col-xs-2">col-xs-2</option>
+            <option value="col-xs-3">col-xs-3</option>
+            <option value="col-xs-4">col-xs-4</option>
+            <option value="col-xs-5">col-xs-5</option>
+            <option value="col-xs-6">col-xs-6</option>
+            <option value="col-xs-7">col-xs-7</option>
+            <option value="col-xs-8">col-xs-8</option>
+            <option value="col-xs-9">col-xs-9</option>
+            <option value="col-xs-10">col-xs-10</option>
+            <option value="col-xs-11">col-xs-11</option>
+            <option value="col-xs-12">col-xs-12</option>
+        </field>
+    </fieldset>
+    <!-- End form's field for article's create or edit view -->
+</form>
