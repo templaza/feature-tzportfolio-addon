@@ -23,6 +23,7 @@ defined('_JEXEC') or die;
 use Joomla\Filesystem\File;
 use Joomla\Registry\Registry;
 use TZ_Portfolio_Plus\Image\TppImageWaterMark;
+use Joomla\CMS\Factory;
 
 jimport('joomla.filesytem.file');
 JLoader::register('TZ_Portfolio_PlusFrontHelper', JPATH_SITE
@@ -36,6 +37,48 @@ JLoader::import('com_tz_portfolio_plus.models.addon_data',$component_path);
 class TZ_Portfolio_Plus_Addon_FeatureModelFeature extends TZ_Portfolio_PlusModelAddon_Data{
 
     protected $addon_element    = 'feature';
+
+    function getForm($data = array(), $loadData = true){
+
+        // Load addon's form
+        if($addonId = Factory::getApplication()->input->getInt('addon_id')){
+            // Get a row instance.
+            $table = $this->getTable('Extensions','TZ_Portfolio_PlusTable');
+
+            // Attempt to load the row.
+            $return = $table->load($addonId);
+
+            // Check for a table object error.
+            if ($return === false && $table->getError())
+            {
+                $this->setError($table->getError());
+
+                return $return;
+            }
+
+            $path   = COM_TZ_PORTFOLIO_PLUS_ADDON_PATH.DIRECTORY_SEPARATOR.$table -> folder
+                .DIRECTORY_SEPARATOR.$table -> element;
+
+            // Add plugin form's path
+            JForm::addFormPath($path.DIRECTORY_SEPARATOR.'admin/models/form');
+            JForm::addFormPath($path.DIRECTORY_SEPARATOR.'admin/models/forms');
+        }
+
+        $plugin     = TZ_Portfolio_PlusPluginHelper::getPlugin('content','feature');
+        $plgParams  = new Registry;
+        $plgParams -> loadString($plugin -> params);
+
+        $sub_fix    =   $plgParams -> get('feature_content_editor_enable', 1);
+        $sub_fix    =   $sub_fix != 1 ? '_basic' : '';
+//        var_dump($this -> getName(). $sub_fix); die();
+        $form = $this->loadForm('com_tz_portfolio_plus.'.$this -> getName(). $sub_fix
+            , $this -> getName(). $sub_fix, array('control' => 'jform', 'load_data' => $loadData));
+
+        if (empty($form)) {
+            return false;
+        }
+        return $form;
+    }
 
     protected function prepareTable($table){
         parent::prepareTable($table);

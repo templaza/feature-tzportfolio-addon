@@ -7,7 +7,7 @@
     <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
     <authorEmail>support@templaza.com</authorEmail>
     <authorUrl>www.tzportfolio.com</authorUrl>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <description>PLG_CONTENT_FEATURE_XML_DESCRIPTION</description>
 
     <files>
@@ -38,6 +38,13 @@
                        label="PLG_CONTENT_FEATURE_SHOW_LABEL">
                     <option value="0">JHIDE</option>
                     <option value="1">JSHOW</option>
+                </field>
+                <field type="radio" name="feature_content_editor_enable"
+                       default="1" class="switcher btn-group"
+                       label="PLG_CONTENT_FEATURE_EDITOR_ENABLE_LABEL"
+                       description="PLG_CONTENT_FEATURE_EDITOR_ENABLE_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
                 </field>
                 <field type="radio" name="feature_content_uikit"
                        default="0" class="switcher btn-group"
